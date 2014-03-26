@@ -48,3 +48,9 @@ guard 'spork', :rspec_env => { 'RAILS_ENV' => 'test' } do
   watch('spec/support/')
 end
 
+notification :tmux,
+  display_message: true,
+  timeout: 5,
+  default_message_format: '%s >> %s',
+  line_separator: ' > ',
+  color_location: 'status-left-bg'
